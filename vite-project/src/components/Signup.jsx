@@ -21,6 +21,7 @@ const Signup = () => {
         const userData = await authService.getCurrentUser();
         if (userData) {
           disptch(login(userData));
+          navigate("/");
         }
       }
     } catch (error) {
@@ -81,7 +82,7 @@ const Signup = () => {
                 required: true,
               })}
             />
-            <Button type="submit" className="w-full">
+            <Button type="submit" className="w-full" textColor="green">
               Create Account
             </Button>
           </div>

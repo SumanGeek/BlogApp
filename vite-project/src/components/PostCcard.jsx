@@ -8,7 +8,7 @@ const PostCcard = ({ $id, title, featureImage }) => {
       <div className="w-full bg-gray rounded-xl py-4">
         <div className="w-full justify-center mb-4">
           <img
-            src={service.getFilePreview(featureImage)}
+          src={service.getFilePreview(featureImage)} //the imagae will be store in third party applications
             className="rounded-xl"
           />
         </div>
