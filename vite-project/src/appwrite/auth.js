@@ -38,7 +38,7 @@ export class AuthService {
       throw error;
     }
   }
-
+  // get the details of users
   async getCurrentUser() {
     try {
       return await this.account.get();

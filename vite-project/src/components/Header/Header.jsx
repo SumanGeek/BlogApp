@@ -44,6 +44,7 @@ const Header = () => {
             </Link>
           </div>
           <ul className="flex ml-auto">
+            // if authstauts is true render this
             {navItems.map((items) =>
               items.active ? (
                 <li key={items.name}>

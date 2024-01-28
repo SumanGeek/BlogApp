@@ -5,7 +5,7 @@ import { login, logout } from "./store/authSlice";
 import { Header, Footer } from "./components";
 
 const App = () => {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -14,8 +14,10 @@ const App = () => {
       .then((userData) => {
         //userData is the data of current user
         if (userData) {
+          // if there is data in the appwrite then give the userdata to login state
           dispatch(login({ userData }));
         } else {
+          //if there is no user in appwrite database
           dispatch(logout());
         }
       })
